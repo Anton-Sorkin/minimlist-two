@@ -1,0 +1,62 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-size: 16pt;
+  background-color: #f39200;
+  width: 100vw;
+  height: 100%;
+}
+body .product-container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 0.7fr;
+  grid-template-rows: 0.7fr 1fr 1fr 1fr 0.7fr;
+  grid-template-areas: ". . . . ." ". a a . ." ". a a . ." "c a a b b" ". . . . .";
+}
+@media (max-width: 640px) {
+  body .product-container {
+    grid-template-columns: 0.7fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.7fr 1fr 0.7fr 1fr 0.7fr;
+  }
+}
+@media (min-width: 1440px) {
+  body .product-container {
+    grid-template-columns: 0.7fr 1fr 0.7fr 1fr 0.5fr;
+    grid-template-rows: 0.7fr 1fr 1fr 1fr 0.7fr;
+  }
+}
+body .product-container .main-product {
+  width: 100%;
+  height: 100%;
+  grid-area: a;
+  background-image: url(../product.5cf2e8dd.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+body .product-container .product-desc {
+  width: 100%;
+  height: 100%;
+  grid-area: b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .product-container .go-back {
+  width: 100%;
+  height: 100%;
+  grid-area: c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .product-container .go-back a {
+  color: black;
+}
+body .product-container .go-back a h2 {
+  font-size: 14pt;
+}
